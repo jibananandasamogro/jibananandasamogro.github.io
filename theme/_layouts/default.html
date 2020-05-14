@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }} ॥ {{ site.title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/flexy-framework/flexy@v0.0.2-alpha/flexy.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
+    <script src="https://use.fontawesome.com/d292af0a66.js"></script>
+</head>
+
+<body style="background: url(images/bg.png); font-family:myfont; color:#303030">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="main-container flex-column align-middle" style="min-height: 100vh;">
+        <!-- Header -->
+        <div class="col-md-12 fixed-container flex-row">
+            {% include sidebar.html %}
+            <div class="col-md-9 flex-column space-between padding-20">
+                <h1 class="txt-center"> {{ site.title }}</h1>
+
+                <div class="col-md-12 flex-column justify-left padding-left-right-30">
+
+                    <h2 class="txt-left">{{ page.title }}</h2>
+                    {{ content }}
+
+                </div>
+                <div id="disqus_thread"></div>
+                <script>
+                    /**
+                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                    /*
+                    var disqus_config = function () {
+                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    */
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                        var d = document,
+                            s = d.createElement('script');
+                        s.src = 'https://jibanananda.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+            </div>
+
+        </div>
+        <!-- / Header -->
+        <!-- Content -->
+        <!-- / Content -->
+        <!-- Aside -->
+        <!-- / Aside -->
+        <!-- Footer -->
+        <!-- / Footer -->
+    </div>
+
+</body>
+
+</html>
